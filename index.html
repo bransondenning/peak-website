@@ -16,7 +16,9 @@
 <meta property="og:description" content="One text. Flat price. Your space back today. Rugged, flat-rate junk removal across East Idaho." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://peakpropertycleanouts.com/assets/hero.jpg" />
-<link rel="icon" type="image/png" href="assets/logo-mark.png" />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" type="image/png" href="assets/favicon.png" sizes="512x512" />
+<link rel="apple-touch-icon" href="assets/favicon-180.png" />
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MovingCompany","name":"Peak Property Cleanouts","image":"https://peakpropertycleanouts.com/assets/hero.jpg","telephone":"+12085305009","url":"https://peakpropertycleanouts.com/","priceRange":"$$","address":{"@type":"PostalAddress","addressLocality":"Idaho Falls","addressRegion":"ID","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":43.4917,"longitude":-112.0339},"areaServed":["Idaho Falls","Rigby","Ammon","Rexburg","Sugar City","Menan","Roberts","St. Anthony","Blackfoot","Pocatello"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"20:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"100"}}
@@ -87,10 +89,9 @@ section{position:relative;padding:clamp(70px,8.5vw,124px) 22px;z-index:2}
 /* ════════════ LOADER ════════════ */
 #loader{position:fixed;inset:0;z-index:9999;background:#7F5013;display:grid;place-items:center;overflow:hidden}
 #loader .l-in{text-align:center;position:relative;z-index:2}
-#loader svg{width:min(340px,74vw);height:auto;overflow:visible}
-#loader .draw{fill:none;stroke:#0a0705;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 0 rgba(0,0,0,.18))}
-#loader .ltext{font-family:'Anton';font-size:46px;fill:#0a0705;opacity:0;letter-spacing:1px}
-#loader .lsub{font-family:'Oswald';font-weight:600;font-size:12px;letter-spacing:4.5px;fill:#0a0705;text-transform:uppercase;opacity:0}
+.llogo-wrap{position:relative;display:inline-block;line-height:0}
+#loader #llogo{width:min(460px,86vw);height:auto;display:block;clip-path:inset(0 100% 0 0)}
+#lsweep{position:absolute;top:-8%;bottom:-8%;left:0;width:3px;background:linear-gradient(180deg,transparent,rgba(16,9,2,.9),transparent);box-shadow:0 0 18px rgba(16,9,2,.6);opacity:0}
 
 /* ════════════ BUTTONS ════════════ */
 .btn{position:relative;display:inline-flex;align-items:center;gap:10px;font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.94rem;padding:15px 28px;border:none;cursor:pointer;border-radius:var(--r);transition:transform .18s,box-shadow .2s,background .2s,color .2s;will-change:transform}
@@ -489,15 +490,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 <!-- ════ LOADER ════ -->
 <div id="loader">
   <div class="l-in">
-    <svg id="lbadge" viewBox="0 0 300 232" aria-hidden="true">
-      <path class="draw" d="M55 28 L245 28 L292 116 L245 204 L55 204 L8 116 Z"/>
-      <path class="draw" d="M72 48 L228 48 L266 116 L228 184 L72 184 L34 116 Z"/>
-      <path class="draw" d="M62 122 L104 72 L130 100 L170 58 L198 92 L238 122"/>
-      <path class="draw" d="M157 71 L170 58 L183 72"/>
-      <text class="ltext" x="150" y="160" text-anchor="middle">PEAK</text>
-      <path class="draw" d="M68 180 L98 180 M202 180 L232 180"/>
-      <text class="lsub" x="150" y="184" text-anchor="middle">PROPERTY CLEANOUTS</text>
-    </svg>
+    <div class="llogo-wrap"><img id="llogo" src="assets/logo-black.png" alt="Peak Property Cleanouts" /><span id="lsweep"></span></div>
   </div>
 </div>
 
@@ -907,13 +900,13 @@ const hasGSAP = typeof gsap !== 'undefined';
 function hideLoader(){const l=document.getElementById('loader');if(!l)return;l.style.transition='opacity .5s';l.style.opacity='0';setTimeout(()=>l.style.display='none',550)}
 window.addEventListener('load',()=>{
   if(RM || !hasGSAP){hideLoader();initAll();return;}
-  const paths=gsap.utils.toArray('#lbadge .draw');
-  paths.forEach(p=>{const len=p.getTotalLength();gsap.set(p,{strokeDasharray:len,strokeDashoffset:len})});
   const tl=gsap.timeline({onComplete:initAll});
-  tl.to(paths,{strokeDashoffset:0,duration:.95,ease:'power2.inOut',stagger:.1})
-    .to('#lbadge .ltext',{opacity:1,duration:.45,ease:'power2.out'},'-=.4')
-    .to('#lbadge .lsub',{opacity:1,duration:.4},'-=.3')
-    .to('#loader',{yPercent:-100,duration:.85,ease:'power4.inOut'},'+=.35')
+  gsap.set('#llogo',{clipPath:'inset(0 100% 0 0)'});
+  gsap.set('#lsweep',{left:'0%',opacity:1});
+  tl.to('#llogo',{clipPath:'inset(0 0% 0 0)',duration:1.15,ease:'power1.inOut'},0)
+    .to('#lsweep',{left:'100%',duration:1.15,ease:'power1.inOut'},0)
+    .to('#lsweep',{opacity:0,duration:.3},'-=.22')
+    .to('#loader',{yPercent:-100,duration:.85,ease:'power4.inOut'},'+=.45')
     .set('#loader',{display:'none'});
 });
 /* failsafe: never let the loader or a slow CDN trap the page */
