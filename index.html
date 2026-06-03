@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#14100A" />
+<meta name="theme-color" content="#0A0807" />
 
 <!-- ═══════════ SEO ═══════════ -->
 <title>Junk Removal Idaho Falls, Rigby &amp; Ammon | Same-Day Hauling | Peak Property Cleanouts</title>
@@ -27,18 +27,21 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Saira+Stencil+One&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet" />
 
 <style>
-/* ════════════ TOKENS — warm rugged Idaho cowboy ════════════ */
+/* ════════════ TOKENS — gritty Sitka Subalpine / 4 equal earth tones ════════════ */
 :root{
-  --bg:#14100A; --bg2:#1B150D; --panel:#1F1810; --card:#221A11; --card2:#2A2014;
-  --line:#352A1A; --line2:#473827;
-  --rust:#A9591C; --rust-lt:#C77A33; --rust-dk:#7C3F12;
-  --bourbon:#C68A3C; --tan:#CBA877; --olive:#69714E; --olive-dk:#4C5238; --leather:#7A4E2C;
-  --bone:#ECE3D2; --sand:#C9BBA1; --muted:#A4937A; --muted2:#766850;
+  --bg:#0A0807; --bg2:#0F0C0A; --panel:#121009; --card:#15110B; --card2:#1B160E;
+  --line:#2A2419; --line2:#3C3322;
+  /* the four equals + whiskey */
+  --rust:#A43F07; --rust-lt:#C8541A; --rust-dk:#6E2D06;
+  --olive:#595828; --olive-lt:#8C8B3E; --olive-dk:#33330F;
+  --tan:#D2B58E; --whiskey:#7F5013; --whiskey-lt:#A06A1F;
+  --bourbon:#D2B58E; --sand:#CBBFA6; --leather:#7F5013;
+  --bone:#E7DEC9; --muted:#9C8E73; --muted2:#6E624B;
   --r:3px; --maxw:1220px;
-  --shadow:0 30px 70px -28px rgba(0,0,0,.85);
+  --shadow:0 30px 70px -28px rgba(0,0,0,.92);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
@@ -56,21 +59,22 @@ section{position:relative;padding:clamp(70px,8.5vw,124px) 22px;z-index:2}
 /* ════════════ ATMOSPHERE LAYERS ════════════ */
 .sky{position:fixed;inset:0;z-index:-3;pointer-events:none}
 .sky-layer{position:absolute;inset:0;opacity:0;transition:none}
-.sky-dawn{background:linear-gradient(180deg,#2a1d10 0%,#3a2410 30%,#5a3413 55%,#1a130b 100%);opacity:1}
-.sky-day{background:linear-gradient(180deg,#1b2230 0%,#3a3422 40%,#2a2013 70%,#14100a 100%)}
-.sky-dusk{background:linear-gradient(180deg,#241318 0%,#5e2c14 35%,#7c3f12 55%,#160f09 100%)}
-.sky-night{background:linear-gradient(180deg,#0c0f16 0%,#161019 45%,#120c08 100%)}
+.sky-dawn{background:linear-gradient(180deg,#0d0c07 0%,#1c1809 35%,#33270d 62%,#0a0807 100%);opacity:1}
+.sky-day{background:linear-gradient(180deg,#101309 0%,#222312 42%,#191407 72%,#0a0807 100%)}
+.sky-dusk{background:linear-gradient(180deg,#130f0a 0%,#3a1d06 38%,#5e2a05 60%,#0a0807 100%)}
+.sky-night{background:linear-gradient(180deg,#08080a 0%,#0e0c08 45%,#070605 100%)}
 /* warm film grain */
-.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.10;mix-blend-mode:overlay;
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.17;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 /* topographic contour map */
 .topo{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.16;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 1000 1000'%3E%3Cg fill='none' stroke='%23skip' stroke-width='1.3'%3E%3Cpath stroke='%236b5733' d='M-50 250 C150 180 320 320 520 250 C720 180 880 300 1080 240'/%3E%3Cpath stroke='%236b5733' d='M-50 305 C150 235 320 375 520 305 C720 235 880 355 1080 295'/%3E%3Cpath stroke='%236b5733' d='M-50 365 C160 295 330 435 540 365 C740 300 900 415 1090 355'/%3E%3Cpath stroke='%236b5733' d='M-50 520 C200 460 360 600 560 520 C760 445 900 560 1090 500'/%3E%3Cpath stroke='%236b5733' d='M-50 578 C200 518 360 658 560 578 C760 503 900 618 1090 558'/%3E%3Cpath stroke='%236b5733' d='M-50 642 C210 582 370 718 570 642 C770 567 910 678 1090 622'/%3E%3Cpath stroke='%236b5733' d='M-50 805 C160 745 360 875 560 805 C760 735 900 855 1090 800'/%3E%3Cpath stroke='%236b5733' d='M-50 860 C160 800 360 930 560 860 C760 790 900 910 1090 855'/%3E%3C/g%3E%3C/svg%3E");
   background-size:1100px 1100px}
 /* subalpine camo blobs (very subtle) */
-.camo{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.05;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cg fill='%2369714e'%3E%3Cpath d='M80 120c40-30 90-10 110 30s-10 80-60 70-80-60-50-100z'/%3E%3Cpath d='M380 60c50-10 90 30 80 80s-70 60-110 30-20-100 30-110z'/%3E%3Cpath d='M180 360c60-20 110 20 100 70s-80 70-130 40-30-90 30-110z'/%3E%3Cpath d='M430 380c45-15 85 25 75 70s-65 55-105 28-15-83 30-98z'/%3E%3C/g%3E%3Cg fill='%237a4e2c'%3E%3Cpath d='M250 180c30-10 60 15 52 48s-50 40-72 18-10-56 20-66z'/%3E%3Cpath d='M40 420c28-8 52 16 44 46s-46 36-66 16-6-54 22-62z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:560px 560px}
+.camo{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.08;background-image:url('assets/subalpine-dark.jpg');background-size:460px auto;mix-blend-mode:luminosity}
+.vignette{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 36%,transparent 38%,rgba(3,2,1,.62) 100%)}
+/* bold camo-pattern section background */
+.camo-bg{background-color:#0a0807;background-image:linear-gradient(rgba(9,7,6,.83),rgba(9,7,6,.93)),url('assets/subalpine.jpg');background-size:cover,430px;background-repeat:no-repeat,repeat;background-position:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 #embers{position:fixed;inset:0;z-index:0;pointer-events:none}
 
 /* elevation scroll gauge */
@@ -81,13 +85,12 @@ section{position:relative;padding:clamp(70px,8.5vw,124px) 22px;z-index:2}
 @media(min-width:1100px){.elev{display:block}}
 
 /* ════════════ LOADER ════════════ */
-#loader{position:fixed;inset:0;z-index:9999;background:var(--bg);display:grid;place-items:center;overflow:hidden}
+#loader{position:fixed;inset:0;z-index:9999;background:#7F5013;display:grid;place-items:center;overflow:hidden}
 #loader .l-in{text-align:center;position:relative;z-index:2}
-#loader svg{width:min(240px,52vw);height:auto;overflow:visible}
-#loader .draw{fill:none;stroke:var(--bone);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
-#loader .l-name{font-family:'Anton';font-size:clamp(1.3rem,4vw,2rem);letter-spacing:.04em;color:var(--bone);margin-top:18px;opacity:0}
-#loader .l-sub{font-family:'Zilla Slab';font-weight:600;letter-spacing:.34em;font-size:.66rem;color:var(--rust-lt);text-transform:uppercase;margin-top:6px;opacity:0}
-#loader .l-curtain{position:absolute;inset:0;background:linear-gradient(180deg,#2a1d10,#5a3413 60%,#1a130b);z-index:1;transform:translateY(100%)}
+#loader svg{width:min(340px,74vw);height:auto;overflow:visible}
+#loader .draw{fill:none;stroke:#0a0705;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 0 rgba(0,0,0,.18))}
+#loader .ltext{font-family:'Anton';font-size:46px;fill:#0a0705;opacity:0;letter-spacing:1px}
+#loader .lsub{font-family:'Oswald';font-weight:600;font-size:12px;letter-spacing:4.5px;fill:#0a0705;text-transform:uppercase;opacity:0}
 
 /* ════════════ BUTTONS ════════════ */
 .btn{position:relative;display:inline-flex;align-items:center;gap:10px;font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.94rem;padding:15px 28px;border:none;cursor:pointer;border-radius:var(--r);transition:transform .18s,box-shadow .2s,background .2s,color .2s;will-change:transform}
@@ -254,6 +257,23 @@ nav.shrink{background:rgba(15,11,7,.94);box-shadow:0 10px 40px -16px rgba(0,0,0,
 .guar .anton{font-size:clamp(1.8rem,4.6vw,3.1rem);line-height:.98;margin:14px 0 12px}
 .guar .anton .hl{color:var(--bourbon)}
 .guar p{color:var(--muted);max-width:560px;margin:0 auto;font-family:'Zilla Slab';font-weight:600;font-size:.84rem;letter-spacing:.04em}
+
+/* ════════════ INSTANT ESTIMATOR ════════════ */
+.est{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:start;margin-top:8px}
+.est-controls{display:flex;flex-direction:column;gap:22px}
+.est-lbl{font-family:'Saira Stencil One';font-size:.72rem;letter-spacing:.12em;color:var(--tan);text-transform:uppercase;margin-bottom:10px}
+.est-opts{display:flex;flex-wrap:wrap;gap:8px}
+.est-opt{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:11px 15px;border:1px solid var(--line2);border-radius:var(--r);background:var(--card);color:var(--bone);font-family:'Oswald';text-transform:uppercase;font-size:.84rem;letter-spacing:.02em;cursor:pointer;transition:.15s}
+.est-opt small{font-family:'Zilla Slab';font-weight:700;font-size:.72rem;color:var(--muted)}
+.est-opt:hover{border-color:var(--tan);transform:translateY(-1px)}
+.est-opt.sel{background:linear-gradient(120deg,var(--rust),var(--rust-lt));border-color:transparent;color:#fff5ea}
+.est-opt.sel small{color:rgba(255,245,234,.85)}
+.est-out{border:1px solid var(--rust-dk);border-radius:var(--r);padding:26px 24px;background:linear-gradient(180deg,rgba(169,89,28,.12),rgba(10,8,7,.5));position:sticky;top:90px;text-align:center}
+.est-out-lbl{font-family:'Saira Stencil One';font-size:.68rem;letter-spacing:.12em;color:var(--tan);text-transform:uppercase}
+.est-total{font-family:'Anton';font-size:4.2rem;color:var(--rust-lt);line-height:1;margin:8px 0;text-shadow:0 3px 0 rgba(0,0,0,.45)}
+.est-note{font-family:'Zilla Slab';font-weight:600;font-size:.72rem;color:var(--muted);letter-spacing:.04em;margin-bottom:16px;text-transform:uppercase}
+.est-fine{font-family:'Zilla Slab';font-size:.64rem;color:var(--muted2);margin-top:10px}
+@media(max-width:820px){.est{grid-template-columns:1fr}.est-out{position:static}}
 
 /* ════════════ BEFORE/AFTER ════════════ */
 .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -469,13 +489,16 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 <!-- ════ LOADER ════ -->
 <div id="loader">
   <div class="l-in">
-    <svg viewBox="0 0 200 110" aria-hidden="true">
-      <path class="draw" id="ldraw" d="M8 96 L52 40 L70 60 L104 14 L128 50 L150 28 L192 96"/>
+    <svg id="lbadge" viewBox="0 0 300 232" aria-hidden="true">
+      <path class="draw" d="M55 28 L245 28 L292 116 L245 204 L55 204 L8 116 Z"/>
+      <path class="draw" d="M72 48 L228 48 L266 116 L228 184 L72 184 L34 116 Z"/>
+      <path class="draw" d="M62 122 L104 72 L130 100 L170 58 L198 92 L238 122"/>
+      <path class="draw" d="M157 71 L170 58 L183 72"/>
+      <text class="ltext" x="150" y="160" text-anchor="middle">PEAK</text>
+      <path class="draw" d="M68 180 L98 180 M202 180 L232 180"/>
+      <text class="lsub" x="150" y="184" text-anchor="middle">PROPERTY CLEANOUTS</text>
     </svg>
-    <div class="l-name anton">PEAK PROPERTY CLEANOUTS</div>
-    <div class="l-sub">EASTERN IDAHO · EST.</div>
   </div>
-  <div class="l-curtain"></div>
 </div>
 
 <!-- ════ ATMOSPHERE ════ -->
@@ -488,6 +511,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 <div class="topo"></div>
 <div class="camo"></div>
 <div class="grain"></div>
+<div class="vignette"></div>
 <canvas id="embers"></canvas>
 <div class="elev"><div class="fill"></div><div class="pk">▲</div><div class="lbl">Elevation</div></div>
 
@@ -550,7 +574,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 <!-- ════ PROOF ════ -->
 <div class="proof"><div class="proof-in">
   <div class="proof-it"><span class="stars">★★★★★</span><span class="pt"><b>5.0</b> Google Rating</span></div>
-  <div class="proof-div"></div><div class="proof-it"><span class="pt"><b>100+</b> Loads Hauled</span></div>
+  <div class="proof-div"></div><div class="proof-it"><span class="pt"><b>Countless</b> Loads Hauled</span></div>
   <div class="proof-div"></div><div class="proof-it"><span class="pt"><b>Same-Day</b> Pickup</span></div>
   <div class="proof-div"></div><div class="proof-it"><span class="pt"><b>Flat-Rate</b> · No Hourly Guessing</span></div>
 </div></div>
@@ -622,8 +646,58 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
   </div>
 </section>
 
+<!-- ════ INSTANT ESTIMATOR ════ -->
+<section id="estimate">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="left"><span class="secno">★ / INSTANT ESTIMATE</span><h2 class="h2">BUILD YOUR <span class="hl">FLAT PRICE</span></h2></div>
+      <p class="lead">Tap your load size and any extras — watch your all-in price calculate live. No email, no waiting.</p>
+    </div>
+    <div class="est reveal">
+      <div class="est-controls">
+        <div>
+          <div class="est-lbl">Load Size</div>
+          <div class="est-opts" id="estLoad">
+            <button data-v="150" class="est-opt">Minimum<small>$150</small></button>
+            <button data-v="175" class="est-opt">¼ Trailer<small>$175</small></button>
+            <button data-v="275" class="est-opt sel">½ Trailer<small>$275</small></button>
+            <button data-v="350" class="est-opt">¾ Trailer<small>$350</small></button>
+            <button data-v="425" class="est-opt">Full Trailer<small>$425</small></button>
+          </div>
+        </div>
+        <div>
+          <div class="est-lbl">Add-Ons — tap any that apply</div>
+          <div class="est-opts" id="estAdd">
+            <button data-v="45" class="est-opt">Fridge / Freezer<small>+$45</small></button>
+            <button data-v="25" class="est-opt">Mattress<small>+$25</small></button>
+            <button data-v="25" class="est-opt">TV / Electronics<small>+$25</small></button>
+            <button data-v="15" class="est-opt">Tires<small>+$15</small></button>
+            <button data-v="50" class="est-opt">Stairs (2nd floor+)<small>+$50</small></button>
+            <button data-v="50" class="est-opt">Same-Day Rush<small>+$50</small></button>
+          </div>
+        </div>
+        <div>
+          <div class="est-lbl">Your Town</div>
+          <div class="est-opts" id="estZone">
+            <button data-v="0" class="est-opt sel">Rigby / Menan<small>FREE</small></button>
+            <button data-v="25" class="est-opt">Idaho Falls / Ammon / Rexburg<small>+$25</small></button>
+            <button data-v="50" class="est-opt">Blackfoot / Pocatello<small>+$50</small></button>
+          </div>
+        </div>
+      </div>
+      <div class="est-out">
+        <div class="est-out-lbl">Estimated Flat Price</div>
+        <div class="est-total">$<span id="estNum">275</span></div>
+        <div class="est-note">All-in: labor · hauling · dump fees · sweep-out</div>
+        <a id="estCta" class="btn btn-rust" style="width:100%;justify-content:center">Lock This Price — Text Us ►</a>
+        <p class="est-fine">Estimate only — your exact flat price is confirmed before we lift a finger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ════ GUARANTEE ════ -->
-<section><div class="wrap"><div class="guar reveal">
+<section class="camo-bg"><div class="wrap"><div class="guar reveal">
   <span class="kick c" style="justify-content:center">The Peak Guarantee</span>
   <div class="anton">FASTER, CLEANER &amp; MORE RELIABLE —<br/><span class="hl">OR YOU DON'T PAY A DIME.</span></div>
   <p>If we're not better than whoever you're using now, you don't pay. No fine print. No asterisks. Most clients just tell us they wish they'd called sooner.</p>
@@ -696,7 +770,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
       <p>We're your neighbors — we go to school here, live here, and we're building something real right here in the valley. Hire us and you're not funding a national franchise. You're <b>backing local kids investing in their own future.</b></p>
       <p>Because we own it, you'll never get a crew that doesn't care. Same hustle on a single mattress as a full estate. This is <b>ours</b> — so every job gets done right.</p>
       <div class="about-stats">
-        <div class="ast"><div class="n" data-count="100" data-suf="+">0</div><div class="l">Loads Hauled</div></div>
+        <div class="ast"><div class="n" style="font-size:1.15rem">COUNTLESS</div><div class="l">Loads Hauled</div></div>
         <div class="ast"><div class="n">5.0★</div><div class="l">Google Rating</div></div>
         <div class="ast"><div class="n">~4 HR</div><div class="l">Avg Job Time</div></div>
         <div class="ast"><div class="n">$0</div><div class="l">Hidden Fees</div></div>
@@ -719,7 +793,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 </section>
 
 <!-- ════ OFFERS ════ -->
-<section>
+<section class="camo-bg">
   <div class="wrap">
     <div class="shead reveal"><div class="left"><span class="secno">07 / DEALS</span><h2 class="h2">STACK THE <span class="o">SAVINGS</span></h2></div></div>
     <div class="offers">
@@ -833,14 +907,13 @@ const hasGSAP = typeof gsap !== 'undefined';
 function hideLoader(){const l=document.getElementById('loader');if(!l)return;l.style.transition='opacity .5s';l.style.opacity='0';setTimeout(()=>l.style.display='none',550)}
 window.addEventListener('load',()=>{
   if(RM || !hasGSAP){hideLoader();initAll();return;}
-  const path=document.getElementById('ldraw');const len=path.getTotalLength();
-  gsap.set(path,{strokeDasharray:len,strokeDashoffset:len});
+  const paths=gsap.utils.toArray('#lbadge .draw');
+  paths.forEach(p=>{const len=p.getTotalLength();gsap.set(p,{strokeDasharray:len,strokeDashoffset:len})});
   const tl=gsap.timeline({onComplete:initAll});
-  tl.to(path,{strokeDashoffset:0,duration:1.05,ease:'power2.inOut'})
-    .to('.l-name',{opacity:1,y:0,duration:.4},'-=.3')
-    .to('.l-sub',{opacity:1,duration:.4},'-=.2')
-    .to('#loader .l-curtain',{y:'-100%',duration:.7,ease:'power3.inOut'},'+=.25')
-    .to('#loader .l-in',{opacity:0,duration:.3},'-=.6')
+  tl.to(paths,{strokeDashoffset:0,duration:.95,ease:'power2.inOut',stagger:.1})
+    .to('#lbadge .ltext',{opacity:1,duration:.45,ease:'power2.out'},'-=.4')
+    .to('#lbadge .lsub',{opacity:1,duration:.4},'-=.3')
+    .to('#loader',{yPercent:-100,duration:.85,ease:'power4.inOut'},'+=.35')
     .set('#loader',{display:'none'});
 });
 /* failsafe: never let the loader or a slow CDN trap the page */
@@ -914,6 +987,9 @@ function basics(){
   const mq=document.getElementById('marq');mq.innerHTML+=mq.innerHTML;
   // dynamic slots
   (function(){const sl=document.getElementById('slotsLeft');if(!sl)return;const h=new Date().getHours();const n=h<10?3:h<13?2:1;sl.textContent=n;const ss=document.getElementById('slotS');if(ss)ss.textContent=n===1?'':'s'})();
+  // text-a-photo: always give feedback (works on mobile; on desktop the toast tells them the number)
+  document.querySelectorAll('a[href^="sms:"]').forEach(a=>a.addEventListener('click',()=>toast('📲 TEXT (208) 530-5009 — ATTACH YOUR PHOTO & HIT SEND')));
+  initEst();
   // tilt
   if(!RM && matchMedia('(hover:hover)').matches){
     document.querySelectorAll('.tilt').forEach(c=>{
@@ -949,13 +1025,47 @@ function basics(){
   let exd=false;document.addEventListener('mouseleave',e=>{if(e.clientY<8&&!exd){exd=true;sx()}});
 }
 
-/* ───── EMBERS (warm drifting particles) ───── */
+/* ───── INSTANT ESTIMATOR ───── */
+function initEst(){
+  const load=document.getElementById('estLoad'),add=document.getElementById('estAdd'),zone=document.getElementById('estZone'),num=document.getElementById('estNum'),cta=document.getElementById('estCta');
+  if(!load)return;let cur=275;
+  function recalc(anim){
+    const base=+load.querySelector('.sel').dataset.v;
+    let extra=0;add.querySelectorAll('.sel').forEach(b=>extra+=+b.dataset.v);
+    const z=+zone.querySelector('.sel').dataset.v;const tot=base+extra+z;
+    cta.href='sms:'+PHONE+'?body='+encodeURIComponent('Hi! My Peak estimate came to $'+tot+'. Can I lock this in? (I\'ll attach a photo)');
+    num.textContent=tot;if(anim){try{num.parentElement.animate([{transform:'scale(1)'},{transform:'scale(1.14)'},{transform:'scale(1)'}],{duration:340,easing:'ease-out'})}catch(e){}}
+    cur=tot;
+  }
+  load.addEventListener('click',e=>{const b=e.target.closest('.est-opt');if(!b)return;load.querySelectorAll('.est-opt').forEach(o=>o.classList.remove('sel'));b.classList.add('sel');recalc(true)});
+  zone.addEventListener('click',e=>{const b=e.target.closest('.est-opt');if(!b)return;zone.querySelectorAll('.est-opt').forEach(o=>o.classList.remove('sel'));b.classList.add('sel');recalc(true)});
+  add.addEventListener('click',e=>{const b=e.target.closest('.est-opt');if(!b)return;b.classList.toggle('sel');recalc(true)});
+  recalc(false);
+}
+
+/* ───── EMBERS (real rectangular embers) ───── */
 function embers(){
   const c=document.getElementById('embers'),x=c.getContext('2d');let W,H,ps=[];
   function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
-  const N=Math.min(46,Math.floor(innerWidth/30));
-  for(let i=0;i<N;i++)ps.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.5,s:Math.random()*.4+.15,d:Math.random()*Math.PI*2,o:Math.random()*.5+.2});
-  (function loop(){x.clearRect(0,0,W,H);for(const p of ps){p.y-=p.s;p.x+=Math.sin(p.d+=.01)*.3;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba('+(200+Math.random()*30|0)+',140,60,'+p.o+')';x.fill()}requestAnimationFrame(loop)})();
+  const N=Math.min(95,Math.floor(innerWidth/13));
+  function mk(fromBottom){const w=Math.random()*4+1.4;return{x:Math.random()*W,y:fromBottom?H+Math.random()*60:Math.random()*H,w:w,h:w*(Math.random()*1.5+.7),vy:Math.random()*1.15+.45,vx:(Math.random()-.5)*.55,rot:Math.random()*6.28,vr:(Math.random()-.5)*.05,life:Math.random()*6.28,o:Math.random()*.65+.35,hue:Math.random()*28+12}}
+  for(let i=0;i<N;i++)ps.push(mk(false));
+  (function loop(){
+    x.clearRect(0,0,W,H);x.globalCompositeOperation='lighter';
+    for(let i=0;i<ps.length;i++){const p=ps[i];
+      p.y-=p.vy;p.x+=p.vx+Math.sin((p.y*.012)+p.life)*.4;p.rot+=p.vr;p.life+=.07;
+      if(p.y<-25){ps[i]=mk(true);continue}
+      const flick=.62+Math.sin(p.life)*.38;const dense=Math.min(1,(H-p.y)/H*1.5+.15);const o=p.o*flick*dense;
+      x.save();x.translate(p.x,p.y);x.rotate(p.rot);
+      const g=x.createRadialGradient(0,0,0,0,0,p.w*3.4);
+      g.addColorStop(0,'rgba(255,'+(155+p.hue*2|0)+',90,'+o+')');
+      g.addColorStop(.45,'rgba('+(225+p.hue|0)+','+(95+p.hue|0)+',32,'+(o*.45)+')');
+      g.addColorStop(1,'rgba(110,38,8,0)');
+      x.fillStyle=g;x.fillRect(-p.w*3.4,-p.w*3.4,p.w*6.8,p.w*6.8);
+      x.fillStyle='rgba(255,'+(200+p.hue|0)+',150,'+Math.min(1,o*1.35)+')';
+      x.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+      x.restore();
+    }x.globalCompositeOperation='source-over';requestAnimationFrame(loop)})();
 }
 
 /* ───── UI HELPERS ───── */
