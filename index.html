@@ -529,12 +529,12 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
     <div class="nav-links">
       <a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#work">The Work</a><a href="#reviews">Reviews</a><a href="#about">Our Story</a><a href="#area">Area</a>
     </div>
-    <a href="#book" class="btn btn-rust nav-cta-d">Get Flat Price</a>
+    <a href="book.html" class="btn btn-rust nav-cta-d">Get Flat Price</a>
     <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')">☰</button>
   </div>
   <div class="mnav" id="mnav">
     <a href="#services" onclick="cm()">Services</a><a href="#pricing" onclick="cm()">Pricing</a><a href="#work" onclick="cm()">The Work</a><a href="#reviews" onclick="cm()">Reviews</a><a href="#about" onclick="cm()">Our Story</a><a href="#area" onclick="cm()">Service Area</a>
-    <a href="#book" onclick="cm()" style="color:var(--bourbon)">► Get Flat Price</a><a href="tel:2085305009">(208) 530-5009</a>
+    <a href="book.html" onclick="cm()" style="color:var(--bourbon)">► Get Flat Price</a><a href="tel:2085305009">(208) 530-5009</a>
   </div>
 </nav>
 
@@ -751,7 +751,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
       <div class="rev tilt reveal"><div class="layer"><div class="stars">★★★★★</div><p class="rt">"Needed some yard stuff cleaned up. Mostly cause I'm lazy! They were very quick to get to me and get it cleaned up. Amazing! Will definitely use them again!"</p><div class="ra"><div class="rav">R</div><div><div class="rn">Russ McUne</div><div class="rd">7 weeks ago</div></div><div class="gg">G</div></div></div></div>
       <div class="rev tilt reveal"><div class="layer"><div class="stars">★★★★★</div><p class="rt">"They came out and got everything cleaned up quick and for a fair price!"</p><div class="ra"><div class="rav">J</div><div><div class="rn">Joe</div><div class="rd">7 weeks ago</div></div><div class="gg">G</div></div></div></div>
       <div class="rev tilt reveal"><div class="layer"><div class="stars">★★★★★</div><p class="rt">"Great job. I had a pile of wood in my back yard and thought it was going to be too expensive to have someone else haul it… these guys made it easy and affordable."</p><div class="ra"><div class="rav">S</div><div><div class="rn">ScrollStopping Discoveries</div><div class="rd">11 weeks ago · 2 photos</div></div><div class="gg">G</div></div></div></div>
-      <div class="rev tilt reveal" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:14px"><div class="layer"><div class="kick">Your Review Here</div><p class="rt" style="flex:0;margin:14px 0">Join the crew of happy East Idaho customers. Book today and see why folks wish they'd called sooner.</p><a href="#book" class="btn btn-rust">Get Your Flat Price ►</a></div></div>
+      <div class="rev tilt reveal" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:14px"><div class="layer"><div class="kick">Your Review Here</div><p class="rt" style="flex:0;margin:14px 0">Join the crew of happy East Idaho customers. Book today and see why folks wish they'd called sooner.</p><a href="book.html" class="btn btn-rust">Get Your Flat Price ►</a></div></div>
     </div>
   </div>
 </section>
@@ -850,19 +850,12 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
       </div>
       <div class="callbox"><div class="l">Rather just call or text?</div><a href="tel:2085305009" class="num">(208) 530-5009</a><div class="hrs">Open 7 days · 7am–8pm</div></div>
     </div>
-    <div class="bform reveal">
-      <h3>Request Your Pickup</h3>
-      <div class="sub">Free quote · No obligation · Fast confirmation</div>
-      <form onsubmit="hb(event)">
-        <div class="g2"><div class="fld"><label>First Name *</label><input required placeholder="John"/></div><div class="fld"><label>Phone *</label><input type="tel" required placeholder="(208) 555-0000"/></div></div>
-        <div class="fld"><label>Service Address / Town *</label><input required placeholder="123 Main St, Idaho Falls"/></div>
-        <div class="g2"><div class="fld"><label>Service *</label><select required><option value="">Select…</option><option>Garage Cleanout</option><option>Furniture Removal</option><option>Appliance Removal</option><option>Construction Debris</option><option>Yard Waste</option><option>Moving / Estate Cleanout</option><option>Other</option></select></div><div class="fld"><label>Load Size</label><select><option value="">Not sure</option><option>Minimum ($150)</option><option>¼ Trailer ($175)</option><option>½ Trailer ($275)</option><option>¾ Trailer ($350)</option><option>Full Trailer ($425)</option></select></div></div>
-        <div class="fld"><label>Preferred Date</label><input type="date"/></div>
-        <div class="fld"><label>Preferred Time</label><div class="slots"><div class="slot" onclick="ps(this)">7–9 AM</div><div class="slot" onclick="ps(this)">9–11 AM</div><div class="slot" onclick="ps(this)">11–1 PM</div><div class="slot" onclick="ps(this)">1–3 PM</div><div class="slot" onclick="ps(this)">3–5 PM</div><div class="slot" onclick="ps(this)">5–7 PM</div></div></div>
-        <div class="fld"><label>Describe the Job</label><textarea placeholder="What needs to go? Where is it (garage, 2nd floor, backyard)? Any big/heavy items?"></textarea></div>
-        <button class="btn btn-rust fsub" type="submit">► Request My Flat Price</button>
-        <p class="fnote">We'll text to confirm within 30 minutes.</p>
-      </form>
+    <div class="bform reveal" style="display:flex;flex-direction:column;justify-content:center;text-align:center;gap:16px">
+      <div class="kick" style="justify-content:center">60-Second Booking</div>
+      <h3 style="font-size:1.7rem">START YOUR <span style="color:var(--rust-lt)">FLAT-PRICE BOOKING</span></h3>
+      <p style="color:var(--muted)">A few quick taps — what's going, a couple photos, your address, and a time. We text you a firm flat price fast. No hourly guessing, no obligation.</p>
+      <a href="book.html" class="btn btn-rust" data-mag style="justify-content:center;font-size:1.05rem;padding:18px">► Start My Booking</a>
+      <p class="fnote">Takes under a minute · We'll text to confirm</p>
     </div>
   </div>
 </section>
@@ -877,7 +870,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
     <div class="final-btns">
       <a href="tel:2085305009" class="btn btn-rust" data-mag><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.5 5.5C2.5 4 3.7 3 5 3h2l1.5 4-2 1.5a13 13 0 006 6l1.5-2 4 1.5v2c0 1.3-1 2.5-2.5 2.5A16 16 0 012.5 5.5z"/></svg> Call (208) 530-5009</a>
       <a href="sms:2085305009?body=Hi! Photo of my junk for a flat price:" class="btn btn-out" data-mag>Text a Photo</a>
-      <a href="#book" class="btn btn-ghost" data-mag>Book Online</a>
+      <a href="book.html" class="btn btn-ghost" data-mag>Book Online</a>
     </div>
   </div>
 </section>
@@ -889,13 +882,13 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
     <div class="foot-brand"><img src="assets/logo.png" alt="Peak Property Cleanouts"/><p>Rugged, flat-rate junk removal &amp; property cleanouts. Locally owned in Eastern Idaho. Licensed &amp; insured. We haul away almost anything.</p><a href="tel:2085305009" class="num">(208) 530-5009</a><p class="slab" style="font-size:.7rem;margin-top:6px;color:var(--muted2);text-transform:uppercase;letter-spacing:.06em">Open 7 days · 7am–8pm</p></div>
     <div class="fcol"><h4>Services</h4><a href="#services">Garage Cleanouts</a><a href="#services">Furniture Removal</a><a href="#services">Appliance Removal</a><a href="#services">Construction Debris</a><a href="#services">Yard Waste</a><a href="#services">Moving &amp; Estate</a></div>
     <div class="fcol"><h4>Service Area</h4><a href="#area">Rigby</a><a href="#area">Idaho Falls</a><a href="#area">Ammon</a><a href="#area">Rexburg</a><a href="#area">Blackfoot</a><a href="#area">Pocatello</a></div>
-    <div class="fcol"><h4>Company</h4><a href="#pricing">Pricing</a><a href="#work">The Work</a><a href="#reviews">Reviews</a><a href="#about">Our Story</a><a href="#faq">FAQ</a><a href="#book">Get Flat Price</a></div>
+    <div class="fcol"><h4>Company</h4><a href="#pricing">Pricing</a><a href="#work">The Work</a><a href="#reviews">Reviews</a><a href="#about">Our Story</a><a href="#faq">FAQ</a><a href="book.html">Get Flat Price</a></div>
   </div>
   <div class="foot-bot"><span>© 2026 Peak Property Cleanouts · Idaho Falls, ID</span><span>Locally Owned · Licensed &amp; Insured · Serving East Idaho</span></div>
 </footer>
 
 <!-- ════ STICKY / POPS / TOAST ════ -->
-<div id="sticky"><p>► <b>SAME-DAY SLOTS FILLING FAST</b> — LOCK YOURS, ONE TEXT.</p><a href="tel:2085305009" class="btn btn-rust" style="padding:10px 20px">Call Now</a><a href="#book" class="btn btn-out" style="padding:10px 20px">Flat Price</a></div>
+<div id="sticky"><p>► <b>SAME-DAY SLOTS FILLING FAST</b> — LOCK YOURS, ONE TEXT.</p><a href="tel:2085305009" class="btn btn-rust" style="padding:10px 20px">Call Now</a><a href="book.html" class="btn btn-out" style="padding:10px 20px">Flat Price</a></div>
 <div id="spop"><svg class="si" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><div><div class="st" id="spopN">Booked in Idaho Falls</div><div class="ss" id="spopA">½ trailer cleanout · 2 hrs ago</div></div></div>
 <div id="toast">✓ GOT IT — WE'LL TEXT YOU RIGHT BACK.</div>
 
