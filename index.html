@@ -40,7 +40,7 @@
   --rust:#BC9B62; --rust-lt:#D6BF95; --rust-dk:#4E3E16;
   --olive:#595828; --olive-lt:#8C8B3E; --olive-dk:#33330F;
   --tan:#D2B58E; --whiskey:#7F5013; --whiskey-lt:#A06A1F;
-  --bourbon:#8C8B3E; --sand:#C7B58E; --leather:#7F5013;
+  --bourbon:#D2B58E; --sand:#C7B58E; --leather:#7F5013; --btn-txt:#1a1206;
   --bone:#D6C49E; --muted:#9C8E73; --muted2:#6E624B;
   --r:3px; --maxw:1220px;
   --shadow:0 30px 70px -28px rgba(0,0,0,.92);
@@ -96,7 +96,11 @@ section{position:relative;padding:clamp(70px,8.5vw,124px) 22px;z-index:2}
 /* ════════════ BUTTONS ════════════ */
 .btn{position:relative;display:inline-flex;align-items:center;gap:10px;font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.94rem;padding:15px 28px;border:none;cursor:pointer;border-radius:var(--r);transition:transform .18s,box-shadow .2s,background .2s,color .2s;will-change:transform}
 .btn svg{width:18px;height:18px}
-.btn-rust{background:linear-gradient(120deg,var(--rust),var(--rust-lt));color:#1a1206;box-shadow:0 12px 30px -10px rgba(169,89,28,.7)}
+.btn-rust{background:linear-gradient(120deg,var(--rust),var(--rust-lt));color:var(--btn-txt);box-shadow:0 12px 30px -10px rgba(0,0,0,.55)}
+/* ===== per-section accent rotation: olive / whiskey / tan all equal ===== */
+.t-tan,#hero,#work,#founder,#faq{--rust:#BC9B62;--rust-lt:#D6BF95;--bourbon:#D2B58E;--btn-txt:#1a1206}
+.t-olive,#services,#estimate,#reviews,#area{--rust:#8C8B3E;--rust-lt:#A7A64A;--bourbon:#A7A64A;--btn-txt:#15150a}
+.t-whiskey,#pricing,#about,#book,#final{--rust:#7F5013;--rust-lt:#A06A1F;--bourbon:#C08A38;--btn-txt:#F2E6C8}
 .btn-rust:hover{transform:translateY(-2px);box-shadow:0 18px 44px -10px rgba(169,89,28,.85)}
 .btn-out{background:transparent;color:var(--bone);border:1px solid var(--line2)}
 .btn-out:hover{border-color:var(--bourbon);color:var(--bourbon);transform:translateY(-2px)}
@@ -591,7 +595,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 </section>
 
 <!-- ════ PILLARS ════ -->
-<section style="padding-top:0">
+<section class="t-whiskey" style="padding-top:0">
   <div class="wrap"><div class="pillars">
     <div class="pil tilt reveal"><div class="layer" style="display:flex;gap:16px"><div class="pn">A</div><div><h4>Same-Day Service</h4><p>Your space cleared today — most jobs done in about 4 hours. Call before the afternoon and we'll do our best to be there.</p></div></div></div>
     <div class="pil tilt reveal"><div class="layer" style="display:flex;gap:16px"><div class="pn">B</div><div><h4>Upfront Flat Pricing</h4><p>Know your exact price before we lift a finger. Text a photo, get a flat quote in under an hour. No hourly meter running.</p></div></div></div>
@@ -690,7 +694,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 </section>
 
 <!-- ════ GUARANTEE ════ -->
-<section class="camo-bg"><div class="wrap"><div class="guar reveal">
+<section class="camo-bg t-olive"><div class="wrap"><div class="guar reveal">
   <span class="kick c" style="justify-content:center">The Peak Guarantee</span>
   <div class="anton">FASTER, CLEANER &amp; MORE RELIABLE —<br/><span class="hl">OR YOU DON'T PAY A DIME.</span></div>
   <p>If we're not better than whoever you're using now, you don't pay. No fine print. No asterisks. Most clients just tell us they wish they'd called sooner.</p>
@@ -806,7 +810,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 </section>
 
 <!-- ════ OFFERS ════ -->
-<section class="camo-bg">
+<section class="camo-bg t-tan">
   <div class="wrap">
     <div class="shead reveal"><div class="left"><span class="secno">07 / DEALS</span><h2 class="h2">STACK THE <span class="o">SAVINGS</span></h2></div></div>
     <div class="offers">
