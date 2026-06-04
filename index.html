@@ -187,6 +187,18 @@ nav.shrink{background:rgba(15,11,7,.94);box-shadow:0 10px 40px -16px rgba(0,0,0,
 .ba-tag{position:absolute;bottom:16px;z-index:5;font-family:'Zilla Slab';font-weight:700;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;border-radius:var(--r);background:rgba(11,8,5,.85);border:1px solid var(--line2);backdrop-filter:blur(4px);pointer-events:none}
 .ba-tag.before{left:16px;color:var(--bone)}
 .ba-tag.after{right:16px;color:var(--bourbon);border-color:var(--rust-dk)}
+/* the work — 12 before/after grid */
+.workba-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.workba{aspect-ratio:1/1!important;border:1px solid var(--line);border-radius:var(--r);background:#000;box-shadow:0 10px 26px -18px rgba(0,0,0,.9)}
+.workba img{filter:contrast(1.06) saturate(.9) brightness(.96)}
+.workba .ba-tag{top:8px;bottom:auto;font-size:.5rem;padding:3px 7px;letter-spacing:.08em}
+.workba .ba-tag.before{left:8px}
+.workba .ba-tag.after{right:8px}
+.workba .ba-knob{width:30px;height:30px}
+.workba .ba-knob svg{width:14px;height:14px}
+@media(max-width:900px){.workba-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.workba-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:901px){.workba-grid .workba:nth-child(9){grid-column-start:2}}
 /* parallax mountain ranges (anchored to hero bottom, span full width) */
 .ranges{position:absolute;left:0;right:0;bottom:-1px;z-index:4;pointer-events:none;height:62%}
 .ridge-glow{position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(127,80,19,.16) 28%,rgba(160,106,31,.36) 54%,rgba(123,80,19,.3) 76%,rgba(10,8,7,.62) 100%)}
@@ -721,35 +733,21 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
   <div class="wrap">
     <div class="shead reveal">
       <div class="left"><span class="secno">03 / THE WORK</span><h2 class="h2">BEFORE &amp; <span class="o">AFTER</span></h2></div>
-      <p class="lead">Real units. Real cleanouts. Right here in East Idaho. Drag the handle and watch the transformation.</p>
+      <p class="lead">Real jobs, right here in East Idaho — every tile is an actual Peak cleanout. Drag any handle to wipe from the mess to the magic.</p>
     </div>
-    <div class="ba-grid">
-      <div class="ba reveal">
-        <div class="ba-stage" data-ba>
-          <img loading="lazy" decoding="async" class="ba-after" src="assets/ba1-after.jpg" alt="Apartment cleanout after — empty and swept"/>
-          <img loading="lazy" decoding="async" class="ba-before" src="assets/ba1-before.jpg" alt="Apartment cleanout before"/>
-          <div class="ba-hint">◄ drag to reveal ►</div>
-          <div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
-        </div>
-        <div class="ba-foot"><span class="bl">Apartment Turnover</span><span class="loc">Unit Cleared + Swept</span></div>
-      </div>
-      <div class="ba reveal">
-        <div class="ba-stage" data-ba>
-          <img loading="lazy" decoding="async" class="ba-after" src="assets/ba2-after.jpg" alt="Kitchen and laundry cleanout after"/>
-          <img loading="lazy" decoding="async" class="ba-before" src="assets/ba2-before.jpg" alt="Kitchen and laundry cleanout before"/>
-          <div class="ba-hint">◄ drag to reveal ►</div>
-          <div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
-        </div>
-        <div class="ba-foot"><span class="bl">Kitchen &amp; Laundry</span><span class="loc">Move-Out Ready</span></div>
-      </div>
+    <div class="workba-grid">
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work1-after.jpg" alt="Garage cleanout after — emptied and swept"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work1-before.jpg" alt="Garage cleanout before — packed with junk"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work2-after.jpg" alt="Kitchen cleanout after — cleared"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work2-before.jpg" alt="Kitchen cleanout before — cluttered"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work3-after.jpg" alt="Kitchen cleanout after — cleared"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work3-before.jpg" alt="Kitchen cleanout before — cluttered"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work4-after.jpg" alt="Bathroom cleanout after — clean"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work4-before.jpg" alt="Bathroom cleanout before"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work5-after.jpg" alt="Bedroom cleanout after — empty"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work5-before.jpg" alt="Bedroom cleanout before — furnished and cluttered"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work6-after.jpg" alt="Bedroom cleanout after — empty"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work6-before.jpg" alt="Bedroom cleanout before"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work7-after.jpg" alt="Living room cleanout after — empty and swept"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work7-before.jpg" alt="Living room cleanout before — furniture and clutter"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work8-after.jpg" alt="Bedroom cleanout after — empty"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work8-before.jpg" alt="Bedroom cleanout before"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work9-after.jpg" alt="Spare room cleanout after — empty"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work9-before.jpg" alt="Spare room cleanout before"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
+      <div class="ba-stage workba reveal" data-ba><img loading="lazy" decoding="async" class="ba-after" src="assets/work10-after.jpg" alt="Stairwell cleanout after — cleared"/><img loading="lazy" decoding="async" class="ba-before" src="assets/work10-before.jpg" alt="Stairwell cleanout before"/><span class="ba-tag before">Before</span><span class="ba-tag after">After</span><div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div></div>
     </div>
-    <div class="rstrip">
-      <figure class="reveal"><img loading="lazy" decoding="async" src="assets/hero.jpg" alt="Loaded dump trailer of demolition debris"/><figcaption>DEMO HAUL · LOADED</figcaption></figure>
-      <figure class="reveal"><img loading="lazy" decoding="async" src="assets/rig.jpg" alt="Peak Property Cleanouts custom hauling trailer"/><figcaption>THE RIG · ON SITE</figcaption></figure>
-      <figure class="reveal"><img loading="lazy" decoding="async" src="assets/result-yard.jpg" alt="Yard debris cleanup"/><figcaption>YARD CLEANUP</figcaption></figure>
-      <figure class="reveal"><img loading="lazy" decoding="async" src="assets/result-room.jpg" alt="Cleared and swept room after cleanout"/><figcaption>CLEARED + SWEPT</figcaption></figure>
-    </div>
-    <p class="subnote" style="text-align:center;margin-top:22px">// More before &amp; afters loading in soon — fresh job photos added regularly.</p>
+    <p class="subnote" style="text-align:center;margin-top:22px">// Real Peak cleanouts across East Idaho — fresh before &amp; afters added all the time.</p>
   </div>
 </section>
 
