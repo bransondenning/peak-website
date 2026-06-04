@@ -181,6 +181,12 @@ nav.shrink{background:rgba(15,11,7,.94);box-shadow:0 10px 40px -16px rgba(0,0,0,
 .hero-right::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,var(--bg) 1%,transparent 26%,transparent 74%,rgba(20,16,10,.5)),linear-gradient(0deg,rgba(20,16,10,.7),transparent 45%)}
 .hero-badge{position:absolute;right:18px;bottom:18px;z-index:5;background:rgba(14,11,7,.82);border:1px solid var(--line2);border-radius:var(--r);padding:11px 14px;font-family:'Zilla Slab';font-weight:600;font-size:.66rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;backdrop-filter:blur(4px)}
 .hero-badge .hl{color:var(--bourbon)}
+/* hero before/after slider — gritty */
+.hero-ba{position:absolute!important;inset:0!important;aspect-ratio:auto!important;width:100%;height:100%;border-radius:0;cursor:ew-resize}
+.hero-ba img{filter:contrast(1.07) saturate(.92) brightness(.97)}
+.ba-tag{position:absolute;bottom:16px;z-index:5;font-family:'Zilla Slab';font-weight:700;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;border-radius:var(--r);background:rgba(11,8,5,.85);border:1px solid var(--line2);backdrop-filter:blur(4px);pointer-events:none}
+.ba-tag.before{left:16px;color:var(--bone)}
+.ba-tag.after{right:16px;color:var(--bourbon);border-color:var(--rust-dk)}
 /* parallax mountain ranges (anchored to hero bottom, span full width) */
 .ranges{position:absolute;left:0;right:0;bottom:-1px;z-index:4;pointer-events:none;height:62%}
 .ridge-glow{position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(127,80,19,.16) 28%,rgba(160,106,31,.36) 54%,rgba(123,80,19,.3) 76%,rgba(10,8,7,.62) 100%)}
@@ -563,9 +569,14 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
       </div>
     </div>
     <div class="hero-right">
-      <img class="hero-photo" data-hparallax src="assets/sunset.jpg" alt="Idaho mountain ridgeline at sunset — Peak Property Cleanouts"/>
-      <!-- sunset ridgeline photo provides the mountains -->
-      <div class="hero-badge">FRANK CHURCH · <span class="hl">RIVER OF NO RETURN</span><br/>EASTERN IDAHO</div>
+      <div class="ba-stage hero-ba" data-ba>
+        <img class="ba-after" src="assets/hero-after.jpg" alt="Living room after Peak Property Cleanouts — emptied and swept clean"/>
+        <img class="ba-before" src="assets/hero-before.jpg" alt="Living room before — packed with old furniture and clutter"/>
+        <span class="ba-tag before">◄ Before</span>
+        <span class="ba-tag after">After ►</span>
+        <div class="ba-hint">◄ drag to reveal ►</div>
+        <div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
+      </div>
     </div>
   </div>
 </section>
