@@ -40,7 +40,7 @@
   --rust:#BC9B62; --rust-lt:#D6BF95; --rust-dk:#4E3E16;
   --olive:#595828; --olive-lt:#8C8B3E; --olive-dk:#33330F;
   --tan:#D2B58E; --whiskey:#7F5013; --whiskey-lt:#A06A1F;
-  --bourbon:#D2B58E; --sand:#C7B58E; --leather:#7F5013;
+  --bourbon:#8C8B3E; --sand:#C7B58E; --leather:#7F5013;
   --bone:#D6C49E; --muted:#9C8E73; --muted2:#6E624B;
   --r:3px; --maxw:1220px;
   --shadow:0 30px 70px -28px rgba(0,0,0,.92);
@@ -173,7 +173,7 @@ nav.shrink{background:rgba(15,11,7,.94);box-shadow:0 10px 40px -16px rgba(0,0,0,
 .htr svg{width:18px;height:18px;color:var(--bourbon);flex-shrink:0}
 /* hero right: photo + parallax mountains */
 .hero-right{position:relative;overflow:hidden;border-left:1px solid var(--line);background:#0b0805}
-.hero-photo{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:center 55%;opacity:.9;filter:contrast(1.08) saturate(.92) sepia(.12)}
+.hero-photo{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:center 50%;opacity:1;filter:contrast(1.05) saturate(1.1)}
 .hero-right::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,var(--bg) 1%,transparent 26%,transparent 74%,rgba(20,16,10,.5)),linear-gradient(0deg,rgba(20,16,10,.7),transparent 45%)}
 .hero-badge{position:absolute;right:18px;bottom:18px;z-index:5;background:rgba(14,11,7,.82);border:1px solid var(--line2);border-radius:var(--r);padding:11px 14px;font-family:'Zilla Slab';font-weight:600;font-size:.66rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;backdrop-filter:blur(4px)}
 .hero-badge .hl{color:var(--bourbon)}
@@ -554,15 +554,9 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
       </div>
     </div>
     <div class="hero-right">
-      <img class="hero-photo" data-hparallax src="assets/hero.jpg" alt="Peak Property Cleanouts loaded trailer hauling junk in East Idaho"/>
-      <div class="ranges" id="ranges">
-        <div class="ridge-glow"></div>
-        <svg class="rg r1" data-mtn="12" viewBox="0 0 1440 240" preserveAspectRatio="none"><path d="M0,150 C120,142 210,118 330,128 C450,138 540,98 670,108 C800,118 890,86 1030,100 C1170,114 1270,92 1440,112 L1440,240 L0,240 Z"/></svg>
-        <svg class="rg r2" data-mtn="28" viewBox="0 0 1440 240" preserveAspectRatio="none"><path d="M0,182 C150,172 230,126 370,142 C510,158 610,108 750,126 C890,144 990,100 1130,122 C1270,144 1350,130 1440,146 L1440,240 L0,240 Z"/></svg>
-        <svg class="rg r3" data-mtn="48" viewBox="0 0 1440 240" preserveAspectRatio="none"><path d="M0,210 C120,200 250,150 410,172 C570,194 670,140 830,162 C990,184 1090,152 1250,174 C1350,188 1410,180 1440,186 L1440,240 L0,240 Z"/></svg>
-        <svg class="rg r4" data-mtn="72" viewBox="0 0 1440 240" preserveAspectRatio="none"><path d="M0,240 C150,212 290,184 450,208 C610,232 710,192 890,216 C1050,238 1170,208 1330,228 C1390,236 1420,234 1440,238 L1440,240 Z"/></svg>
-      </div>
-      <div class="hero-badge">UNIT 01 · <span class="hl">LOADED &amp; GONE</span><br/>EASTERN IDAHO</div>
+      <img class="hero-photo" data-hparallax src="assets/sunset.jpg" alt="Idaho mountain ridgeline at sunset — Peak Property Cleanouts"/>
+      <!-- sunset ridgeline photo provides the mountains -->
+      <div class="hero-badge">FRANK CHURCH · <span class="hl">RIVER OF NO RETURN</span><br/>EASTERN IDAHO</div>
     </div>
   </div>
 </section>
@@ -646,7 +640,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 </section>
 
 <!-- ════ INSTANT ESTIMATOR ════ -->
-<section id="estimate">
+<section id="estimate" style="background:#181109;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="shead reveal">
       <div class="left"><span class="secno">★ / INSTANT ESTIMATE</span><h2 class="h2">BUILD YOUR <span class="hl">FLAT PRICE</span></h2></div>
@@ -703,7 +697,7 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
 </div></div></section>
 
 <!-- ════ THE WORK ════ -->
-<section id="work">
+<section id="work" style="background:#14150b;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="shead reveal">
       <div class="left"><span class="secno">03 / THE WORK</span><h2 class="h2">BEFORE &amp; <span class="o">AFTER</span></h2></div>
@@ -774,6 +768,26 @@ footer{border-top:1px solid var(--line);padding:0 0 26px;position:relative;z-ind
         <div class="ast"><div class="n">~4 HR</div><div class="l">Avg Job Time</div></div>
         <div class="ast"><div class="n">$0</div><div class="l">Hidden Fees</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOUNDER ════ -->
+<section id="founder" style="background:#181109;border-top:1px solid var(--line)">
+  <div class="wrap about-grid">
+    <div class="about-right reveal">
+      <span class="secno">05 · II / THE FOUNDER</span>
+      <h2 class="h2" style="margin-top:10px">MEET <span class="hl">BRANSON DENNING</span></h2>
+      <p class="slab" style="font-weight:700;color:var(--bourbon);text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px">Founder &amp; Owner · 16 Years Old · Eastern Idaho</p>
+      <p>Branson started Peak Property Cleanouts at <b>16 years old</b> — not as a side hustle, but as a real business built on one promise: <b>show up, work hard, and treat every customer like a neighbor.</b></p>
+      <p>While most kids his age are scrolling, Branson's loading trailers, answering every call himself, and personally making sure every single job gets done right. Hire Peak and you're not funding a faceless franchise — you're backing a driven young Idahoan who <b>stakes his name on the work.</b></p>
+      <p>This is bigger than a job to him — it's the foundation he's building for his future, right here in East Idaho. <b>He knows every job has to earn your trust, and he treats it that way.</b></p>
+      <div style="margin-top:22px"><a href="tel:2085305009" class="btn btn-rust" data-mag>Talk to Branson Directly →</a></div>
+    </div>
+    <div class="crew-slot reveal">
+      <div class="corner tl"></div><div class="corner br"></div>
+      <div><img src="assets/logo-mark.png" class="cm" alt="Peak Property Cleanouts"/><div class="anton">BRANSON <span class="hl">DENNING</span></div><div class="csub">Founder · Age 16 · East Idaho</div></div>
+      <div class="ctag">◢ Founder photo loads here</div>
     </div>
   </div>
 </section>
